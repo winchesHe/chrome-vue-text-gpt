@@ -3,7 +3,7 @@ const path = require('path')
 const pagesObj = {
   devcreate: { entry: 'src/devtools/index.js', filename: 'devcreate.html' }
 }
-const chromeName = ['popup', 'devtools']
+const chromeName = ['popup', 'devtools', 'background']
 const plugins = [
   {
     from: path.resolve('src/manifest.json'),
@@ -38,7 +38,6 @@ const vueConfig = {
   pages: pagesObj,
   configureWebpack: {
     entry: {
-      background: './src/background/background.js',
       content: './src/content/content.js'
     },
     output: {

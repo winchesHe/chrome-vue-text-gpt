@@ -1,13 +1,15 @@
 <template>
   <div id="app">
-    <router-view />
+    <layout />
   </div>
 </template>
 
 <script>
+import Layout from './layouts/BasicLayout.vue'
+
 export default {
-  created () {
-    this.$router.push('/')
+  components: {
+    Layout
   }
 }
 </script>
